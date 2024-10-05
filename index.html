@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 1px;
+        }
+        body {
+            background-color: rgb(18, 18, 18);
+        }
+        h1 {
+            color: aliceblue;
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(0, 248, 248);
+            text-shadow: 0 0 30px  rgb(77, 255, 255);
+            padding-bottom: 20px;
+        }
+        .content {
+            text-align: center;
+            width: 500px;
+            padding: 30px;
+        }
+        form .input-box {
+            height: 50px;
+            margin: 20px 0;
+        }
+        form .input-box input {
+            direction: rtl;
+            width: 100%;
+            color: aliceblue;
+            height: 100%;
+            background: transparent;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgb(0, 248, 248);
+            border: none;
+        }
+        form .input-box input:focus{
+            outline: none;
+        }
+        form .input-box input::placeholder {
+            color: aliceblue;
+            font-size: 15px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .btn{
+            cursor: pointer;
+            border: none;
+            border: 2px solid  rgb(28, 118, 118);
+            width: 100%;
+            height: 50px;
+            background: transparent;
+            color: rgb(0, 0, 0);
+            outline: none;
+            border-radius: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            background-color:  rgb(0, 248, 248);
+            margin-top: 30px;
+            box-shadow: 0 0 10px rgb(0, 248, 248);
+            transition: 0.2s;
+        }
+        .btn:hover{
+            background: transparent;
+            border: 2px solid rgb(0, 248, 248) ;
+            color: aliceblue;
+        }
+        .btn:active{
+            background-color:  rgb(0, 248, 248);
+        }
+        #demo, #demo1, #demo2{
+            margin-top: 20px;
+            color: aliceblue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 30px;
+            color: rgb(0, 248, 248);
+            text-shadow: 0 0 30px  rgb(77, 255, 255);
+            padding-bottom: 20px ;
+        }
+        .massege{
+            text-align: center;
+            max-width: 350px;
+            margin: auto;
+            border: 2px solid  rgb(77, 255, 255);
+            border-radius: 20px;
+        }
+        .massege h3{
+            color: rgb(0, 248, 248);
+            text-shadow: 0 0 30px  rgb(77, 255, 255) ;
+            padding: 20px 0;
+            margin: auto;
+        }
+        .zeyad{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 0 20px;
+            display: none;
+        }
+        .zeyad .botn{
+            margin-bottom: 20px;
+            width: 50%;
+            height: 40px;
+            background:  rgb(77, 255, 255);
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .botn:hover{
+            background: transparent;
+            border: 2px solid rgb(0, 248, 248) ;
+            color: aliceblue;
+        }
+        .botn:active{
+            background-color:  rgb(100, 235, 235);
+        }
+        #pra{
+            border: 2px solid  rgb(2, 189, 189) ;
+            margin-top: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgb(0, 248, 248);
+            padding: 10px;
+            display: none;
+        }
+      
+
+    </style>
+</head>
+<body>
+    <div class="zeyad" id="zeyad">
+        <div class="massege">
+            <h3>يجب ادخال السنه والشهر واليوم</h3>
+            <input type="button" value="موافق" class="botn" id="botn">
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <form action="">
+                <h1>..احسب عمرك </h1>
+                <div class="input-box">
+                    <input type="text" placeholder="السنة" id="year">
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="الشهر" id="Month">
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="اليوم" id="day">
+                </div>
+            </form>
+            <button type="button" class="btn" id="btn">احسب</button>
+            <div class="pra" id="pra">
+                <p id="demo"></p>
+                <p id="demo1"></p>
+                <p id="demo2"></p>
+            </div>
+          
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
